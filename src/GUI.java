@@ -1,7 +1,7 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Kieran Bates
+ * January 20, 2020
+ * This program takes a user specified number of Vrobits and generates change
  */
 
 /**
@@ -241,7 +241,7 @@ public class GUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void calculateButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calculateButtonActionPerformed
-        
+        //Declare change values
         final int vrobitValue = 1;
         final int blointointValue = 500;
         final int frazointValue = 1000;
@@ -259,7 +259,7 @@ public class GUI extends javax.swing.JFrame {
         
         while(repeat == true)
         {
-            try
+            try //Check to see if the user input is valid or if the number is too big to be processed by the program
             {
             userInputValue = Integer.parseInt(userInput.getText());
             }
@@ -368,6 +368,7 @@ public class GUI extends javax.swing.JFrame {
                 repeat = false;
             }
         }
+        //Output the change
         vrobitsOutput.setText(String.valueOf(numberOfVrobits));
         blointointsOutput.setText(String.valueOf(numberOfBlointoints));
         frazointsOutput.setText(String.valueOf(numberOfFrazoints));
